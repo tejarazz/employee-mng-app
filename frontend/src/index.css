@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #111927;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(212.37, 72%, 59%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
+}
+
+#login,
+#signup {
+  background-color: #111927;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(162, 77%, 40%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
+}
+
+#tasklist::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+#alltask::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
