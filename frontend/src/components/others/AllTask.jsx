@@ -12,7 +12,9 @@ const AllTask = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/tasks");
+        const response = await axios.get(
+          `${import.meta.env.VITE_LOCALHOST_URL}/api/tasks`
+        );
         setTasks(response.data); // Set tasks from API response
       } catch (error) {
         setError("Failed to fetch tasks"); // Handle error
