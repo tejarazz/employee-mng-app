@@ -7,6 +7,15 @@ const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const app = express();
 
+// Setting Permissions-Policy header
+app.use((req, res, next) => {
+  res.setHeader(
+    "Permissions-Policy",
+    "camera=(), microphone=(), geolocation=()"
+  ); // Modify as needed
+  next();
+});
+
 // Middleware
 const corsOptions = {
   origin: ["http://localhost:5173", "https://workspherex.netlify.app"],
