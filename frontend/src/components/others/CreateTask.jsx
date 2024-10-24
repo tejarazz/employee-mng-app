@@ -103,7 +103,7 @@ const CreateTask = () => {
       );
 
       console.log("Task created:", response.data);
-      toast.success("Task assigned successfully!"); // Show toast notification
+      toast.success("Task assigned successfully!");
       setFormData({
         taskTitle: "",
         date: "",
@@ -119,7 +119,6 @@ const CreateTask = () => {
 
   return (
     <div className="mt-10">
-      <ToastContainer autoClose={1000} /> {/* Add ToastContainer here */}
       <form
         className="flex flex-col lg:flex-row w-full justify-between text-white bg-black/80 rounded-lg shadow backdrop-blur-3xl p-5 items-start"
         onSubmit={handleSubmit}
@@ -184,6 +183,7 @@ const CreateTask = () => {
           </button>
         </div>
       </form>
+      <ToastContainer autoClose={1000} /> {/* Add ToastContainer here */}
     </div>
   );
 };
