@@ -55,16 +55,12 @@ const AllTask = () => {
       setTasks(tasks.filter((task) => task._id !== taskId)); // Remove the task from the UI
 
       // Show success toast notification
-      toast.success("Task deleted successfully!", {
-        autoClose: 1000,
-      });
+      toast.success("Task deleted successfully!");
     } catch (error) {
       console.error("Failed to delete task", error);
       setError("Failed to delete task");
       // Show error toast notification
-      toast.error("Failed to delete task", {
-        autoClose: 1000,
-      });
+      toast.error("Failed to delete task");
     }
   };
 
@@ -81,7 +77,17 @@ const AllTask = () => {
   return (
     <div className="mt-10 pb-20 shadow-3xl rounded-2xl">
       {/* Toast Container */}
-      <ToastContainer />
+      <ToastContainer
+        position="top-right" // Position of the toast notifications
+        autoClose={3000} // Duration in milliseconds for auto-close
+        hideProgressBar={false} // Show or hide the progress bar
+        newestOnTop={false} // Position newest toast notifications on top
+        closeOnClick // Close notification on click
+        rtl={false} // Enable right-to-left layout if necessary
+        pauseOnFocusLoss // Pause auto-close on window focus loss
+        draggable // Allow toasts to be draggable
+        pauseOnHover // Pause auto-close on hover
+      />
 
       {/* Filter Dropdown */}
       <div className="flex justify-end p-4">

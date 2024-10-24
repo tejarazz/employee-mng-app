@@ -156,7 +156,17 @@ const TaskList = () => {
       ) : (
         <div className="text-white">No tasks available.</div>
       )}
-      <ToastContainer autoClose={1000} />
+      <ToastContainer
+        position="top-right" // Position of the toast notifications
+        autoClose={3000} // Duration in milliseconds for auto-close
+        hideProgressBar={false} // Show or hide the progress bar
+        newestOnTop={false} // Position newest toast notifications on top
+        closeOnClick // Close notification on click
+        rtl={false} // Enable right-to-left layout if necessary
+        pauseOnFocusLoss // Pause auto-close on window focus loss
+        draggable // Allow toasts to be draggable
+        pauseOnHover // Pause auto-close on hover
+      />
     </div>
   );
 };
