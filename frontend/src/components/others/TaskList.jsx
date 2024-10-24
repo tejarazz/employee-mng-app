@@ -156,7 +156,7 @@ const TaskList = () => {
       ) : (
         <div className="text-white">No tasks available.</div>
       )}
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
     </div>
   );
 };

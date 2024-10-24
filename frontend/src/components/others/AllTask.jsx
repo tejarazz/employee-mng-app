@@ -56,14 +56,14 @@ const AllTask = () => {
 
       // Show success toast notification
       toast.success("Task deleted successfully!", {
-        autoClose: 3000, // Auto-close after 3 seconds
+        autoClose: 1000,
       });
     } catch (error) {
       console.error("Failed to delete task", error);
       setError("Failed to delete task");
       // Show error toast notification
       toast.error("Failed to delete task", {
-        autoClose: 3000,
+        autoClose: 1000,
       });
     }
   };
