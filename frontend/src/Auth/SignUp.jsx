@@ -119,11 +119,15 @@ const SignUp = () => {
           <button
             type="submit"
             disabled={loading} // Disable button while loading
-            className={`bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition duration-200 transform w-full ${
+            className={`bg-blue-600 text-white px-6 py-2 flex items-center justify-center rounded-md hover:bg-blue-500 transition duration-200 transform w-full ${
               loading ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
-            {loading ? "Signing Up..." : "Sign Up"} {/* Change button text */}
+            {loading ? (
+              <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+            ) : (
+              "Sign Up"
+            )}
           </button>
         </form>
         <p className="text-center mt-4 text-neutral-600">

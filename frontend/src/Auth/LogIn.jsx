@@ -97,10 +97,14 @@ const LogIn = () => {
           </div>
           <button
             type="submit"
-            className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition duration-200 transform w-full"
+            className="bg-blue-600 text-white flex items-center justify-center px-6 py-2 rounded-md hover:bg-blue-500 transition duration-200 transform w-full"
             disabled={loading} // Disable button while loading
           >
-            {loading ? "Logging in..." : "Login"} {/* Change button text */}
+            {loading ? (
+              <div className="animate-spin  rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+            ) : (
+              "Log In"
+            )}
           </button>
         </form>
         <p className="text-center mt-4 text-neutral-600">
